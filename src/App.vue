@@ -42,7 +42,7 @@ function enviarFormulario() {
 <template>
   <header class="encabezado">
     <h1>PR_Testing</h1>
-    <p class="subtitulo">Repositorio oficial de BolivianWorks</p>
+    <p class="subtitulo">Práctica 2.1 · Repositorio oficial de BolivianWorks</p>
   </header>
 
   <main class="contenido">
