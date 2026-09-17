@@ -128,3 +128,8 @@ body {
 .servicios-icono {
   font-size: 2rem;
 }
+
+/* Espacio entre secciones */
+.contenido section + section {
+  margin-top: 3rem;
+}
