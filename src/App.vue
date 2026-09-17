@@ -17,6 +17,13 @@ const proyectosFiltrados = computed(() =>
     ? proyectos
     : proyectos.filter((proyecto) => proyecto.categoria === categoriaActiva.value)
 )
+
+const servicios = [
+  { icono: '💻', titulo: 'Desarrollo web', descripcion: 'Páginas y aplicaciones web modernas.' },
+  { icono: '📱', titulo: 'Aplicaciones móviles', descripcion: 'Apps para Android e iOS.' },
+  { icono: '🎮', titulo: 'Videojuegos', descripcion: 'Juegos 2D, 3D y realidad virtual.' },
+  { icono: '🔧', titulo: 'Soporte técnico', descripcion: 'Mantenimiento y mejora de sistemas.' },
+]
 </script>
 
 <template>
@@ -42,6 +49,17 @@ const proyectosFiltrados = computed(() =>
         <article v-for="proyecto in proyectosFiltrados" :key="proyecto.nombre" class="proyectos-tarjeta">
           <h3>{{ proyecto.nombre }}</h3>
           <span class="proyectos-categoria">{{ proyecto.categoria }}</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="servicios">
+      <h2>Servicios</h2>
+      <div class="servicios-lista">
+        <article v-for="servicio in servicios" :key="servicio.titulo" class="servicios-tarjeta">
+          <span class="servicios-icono">{{ servicio.icono }}</span>
+          <h3>{{ servicio.titulo }}</h3>
+          <p>{{ servicio.descripcion }}</p>
         </article>
       </div>
     </section>
