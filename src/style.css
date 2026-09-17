@@ -29,6 +29,48 @@ body {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+
+/* Proyectos */
+.proyectos-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.proyectos-boton {
+  padding: 0.5rem 1rem;
+  color: #1e3a8a;
+  background: #ffffff;
+  border: 1px solid #1e3a8a;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.proyectos-boton-activo {
+  color: #ffffff;
+  background: #1e3a8a;
+}
+
+.proyectos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.proyectos-tarjeta {
+  padding: 1.25rem;
+  background: #ffffff;
+  border-left: 4px solid #1e3a8a;
+  border-radius: 8px;
+}
+
+.proyectos-categoria {
+  font-size: 0.875rem;
+  color: #52606d;
+}
+
+/* Contacto */
 .contacto-formulario {
   display: flex;
   flex-direction: column;
@@ -66,4 +108,23 @@ body {
 
 .contacto-exito {
   color: #15803d;
+}
+
+/* Servicios */
+.servicios-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.servicios-tarjeta {
+  padding: 1.25rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-icono {
+  font-size: 2rem;
 }
