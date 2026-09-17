@@ -109,3 +109,22 @@ body {
 .contacto-exito {
   color: #15803d;
 }
+
+/* Servicios */
+.servicios-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.servicios-tarjeta {
+  padding: 1.25rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-icono {
+  font-size: 2rem;
+}

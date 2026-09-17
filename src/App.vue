@@ -18,6 +18,13 @@ const proyectosFiltrados = computed(() =>
     : proyectos.filter((proyecto) => proyecto.categoria === categoriaActiva.value)
 )
 
+const servicios = [
+  { icono: '💻', titulo: 'Desarrollo web', descripcion: 'Páginas y aplicaciones web modernas.' },
+  { icono: '📱', titulo: 'Aplicaciones móviles', descripcion: 'Apps para Android e iOS.' },
+  { icono: '🎮', titulo: 'Videojuegos', descripcion: 'Juegos 2D, 3D y realidad virtual.' },
+  { icono: '🔧', titulo: 'Soporte técnico', descripcion: 'Mantenimiento y mejora de sistemas.' },
+]
+
 const formulario = ref({ nombre: '', correo: '', mensaje: '' })
 const estado = ref('')
 
@@ -78,6 +85,17 @@ function enviarFormulario() {
       </form>
       <p v-if="estado === 'error'" class="contacto-error">Completa todos los campos.</p>
       <p v-if="estado === 'enviado'" class="contacto-exito">¡Mensaje enviado! Gracias por escribirnos.</p>
+    </section>
+
+    <section class="servicios">
+      <h2>Servicios</h2>
+      <div class="servicios-lista">
+        <article v-for="servicio in servicios" :key="servicio.titulo" class="servicios-tarjeta">
+          <span class="servicios-icono">{{ servicio.icono }}</span>
+          <h3>{{ servicio.titulo }}</h3>
+          <p>{{ servicio.descripcion }}</p>
+        </article>
+      </div>
     </section>
   </main>
 </template>
